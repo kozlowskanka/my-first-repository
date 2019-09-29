@@ -1,14 +1,119 @@
 /* Global */
 
-$color-main: red;
-$color-complementary: blue;
-
+$color-one: #1abc9c;
+$color-two: #16a085;
+$color-three: #2ecc71;
+$color-four: #27ae60;
+$color-five: #3498db;
+$color-six: #2980b9;
+$color-seven: #f1c40f;
+$color-eight: #f39c12;
+$color-nine: #e67e22;
+$color-ten: #d35400;
+$color-eleven: #e74c3c;
+$color-twelve: #c0392b;
 
 *, *::before, *::after {
 	box-sizing: border-box;
 }
 
 body {
-    background: $color-main;
-    color: $color-complementary;
+    margin: 0;
+}
+
+.container { 
+    position:fixed;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: red
+}
+
+.squares-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: yellow;
+    height: 100%;
+}
+
+.square-pair {
+    flex: 0 0 33.3333%;
+}
+
+.square {
+  height: 50%;
+}
+
+.one  {
+    background: $color-one;
+}
+
+.two {
+    background: $color-two;
+}
+
+.three {
+    background: $color-three;
+}
+
+.four {
+    background: $color-four;
+}
+
+.five {
+    background: $color-five;
+}
+
+.six  {
+    background: $color-six;
+}
+
+.seven {
+    background: $color-seven;
+}
+
+.eight {
+    background: $color-eight;
+}
+
+.nine {
+    background: $color-nine;
+}
+
+.ten {
+    background: $color-ten;
+}
+
+.eleven {
+    background: $color-eleven;
+}
+
+.twelve {
+    background: $color-twelve;
+}
+
+/*Media*/
+
+@media (max-width: 992px) {
+
+  .square-pair {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .container {
+    position: static;
+  }
+  
+  .squares-wrapper {
+    flex-direction: column;
+    }
+  
+  .square {
+    min-height: 400px;
+  }
 }

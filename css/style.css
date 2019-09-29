@@ -4,7 +4,104 @@
 }
 
 body {
-  background: red;
-  color: blue;
+  margin: 0;
+}
+
+.container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: red;
+}
+
+.squares-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  background-color: yellow;
+  height: 100%;
+}
+
+.square-pair {
+  -ms-flex: 0 0 33.3333%;
+      flex: 0 0 33.3333%;
+}
+
+.square {
+  height: 50%;
+}
+
+.one {
+  background: #1abc9c;
+}
+
+.two {
+  background: #16a085;
+}
+
+.three {
+  background: #2ecc71;
+}
+
+.four {
+  background: #27ae60;
+}
+
+.five {
+  background: #3498db;
+}
+
+.six {
+  background: #2980b9;
+}
+
+.seven {
+  background: #f1c40f;
+}
+
+.eight {
+  background: #f39c12;
+}
+
+.nine {
+  background: #e67e22;
+}
+
+.ten {
+  background: #d35400;
+}
+
+.eleven {
+  background: #e74c3c;
+}
+
+.twelve {
+  background: #c0392b;
+}
+
+/*Media*/
+@media (max-width: 992px) {
+  .square-pair {
+    -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    position: static;
+  }
+  .squares-wrapper {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .square {
+    min-height: 400px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
