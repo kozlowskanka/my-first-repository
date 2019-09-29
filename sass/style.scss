@@ -1,0 +1,14 @@
+/* Global */
+
+$color-main: red;
+$color-complementary: blue;
+
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+    background: $color-main;
+    color: $color-complementary;
+}
