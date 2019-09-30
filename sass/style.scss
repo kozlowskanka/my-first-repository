@@ -1,17 +1,21 @@
 /* Global */
 
-$color-one: #1abc9c;
-$color-two: #16a085;
-$color-three: #2ecc71;
-$color-four: #27ae60;
-$color-five: #3498db;
-$color-six: #2980b9;
+$color-one: #3498db;
+$color-two: #2980b9;
+$color-three: #1abc9c;
+$color-four: #16a085;
+$color-five: #2ecc71;
+$color-six: #27ae60;
 $color-seven: #f1c40f;
 $color-eight: #f39c12;
 $color-nine: #e67e22;
 $color-ten: #d35400;
 $color-eleven: #e74c3c;
 $color-twelve: #c0392b;
+$color-white: #fff;
+$color-black: #000;
+
+$font-main: 'Josefin Sans', sans-serif;
 
 *, *::before, *::after {
 	box-sizing: border-box;
@@ -19,6 +23,12 @@ $color-twelve: #c0392b;
 
 body {
     margin: 0;
+    font-family: $font-main;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 0;
 }
 
 .container { 
@@ -27,8 +37,24 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: red
 }
+
+/*Header*/
+
+.header {
+  height: 80px;
+  background: $color-black;
+}
+
+.header-wrapper {
+  color: $color-white;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+/*Squares*/
 
 .squares-wrapper {
     display: flex;
@@ -44,54 +70,115 @@ body {
 
 .square {
   height: 50%;
+  position: relative;
 }
 
-.one  {
-    background: $color-one;
+.square-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(90deg, $color-white 50%, transparent 50%);
+  background-position:100% 0;
+  background-size: 300%;
+  transition: all 1s;
 }
 
-.two {
-    background: $color-two;
+.square:hover .square-overlay {
+  background-position: 0 100%;
 }
 
-.three {
-    background: $color-three;
+.square:hover .square-name {
+  display: block;
 }
 
-.four {
-    background: $color-four;
+.square-name {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: none;
 }
 
-.five {
-    background: $color-five;
+
+.background {
+
+    &-one {
+      background: $color-one;
+    }
+    &-two {
+      background: $color-two;
+    }
+    &-three {
+      background: $color-three;
+    }
+    &-four {
+      background: $color-four;
+    }
+    &-five {
+      background: $color-five;
+    }
+    &-six {
+      background: $color-six;
+    }
+    &-seven {
+      background: $color-seven;
+    }
+    &-eight{
+      background: $color-eight;
+    }
+    &-nine {
+      background: $color-nine;
+    }
+    &-ten {
+      background: $color-ten;
+    }
+    &-eleven {
+      background: $color-eleven;
+    }
+    &-twelve {
+      background: $color-twelve;
+    }
 }
 
-.six  {
-    background: $color-six;
-}
+.description  {
 
-.seven {
-    background: $color-seven;
-}
-
-.eight {
-    background: $color-eight;
-}
-
-.nine {
-    background: $color-nine;
-}
-
-.ten {
-    background: $color-ten;
-}
-
-.eleven {
-    background: $color-eleven;
-}
-
-.twelve {
-    background: $color-twelve;
+    &-one {
+      color: $color-one;
+    }
+    &-two {
+      color: $color-two;
+    }
+    &-three {
+      color: $color-three;
+    }
+    &-four {
+      color: $color-four;
+    }
+    &-five {
+      color: $color-five;
+    }
+    &-six {
+      color: $color-six;
+    }
+    &-seven {
+      color: $color-seven;
+    }
+    &-eight {
+      color: $color-eight;
+    }
+    &-nine {
+      color: $color-nine;
+    }
+    &-ten {
+      color: $color-ten;
+    }
+    &-eleven {
+      color: $color-eleven;
+    }
+    &-twelve {
+      color: $color-twelve;
+    }
 }
 
 /*Media*/
@@ -114,6 +201,7 @@ body {
     }
   
   .square {
-    min-height: 400px;
+    min-height: 120px;
   }
 }
+

@@ -5,6 +5,12 @@
 
 body {
   margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 0;
 }
 
 .container {
@@ -13,9 +19,26 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: red;
 }
 
+/*Header*/
+.header {
+  height: 80px;
+  background: #000;
+}
+
+.header-wrapper {
+  color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 100%;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+/*Squares*/
 .squares-wrapper {
   display: -ms-flexbox;
   display: flex;
@@ -34,54 +57,130 @@ body {
 
 .square {
   height: 50%;
+  position: relative;
 }
 
-.one {
-  background: #1abc9c;
+.square-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(90deg, #fff 50%, transparent 50%);
+  background-position: 100% 0;
+  background-size: 300%;
+  transition: all 1s;
 }
 
-.two {
-  background: #16a085;
+.square:hover .square-overlay {
+  background-position: 0 100%;
 }
 
-.three {
-  background: #2ecc71;
+.square:hover .square-name {
+  display: block;
 }
 
-.four {
-  background: #27ae60;
+.square-name {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: none;
 }
 
-.five {
+.background-one {
   background: #3498db;
 }
 
-.six {
+.background-two {
   background: #2980b9;
 }
 
-.seven {
+.background-three {
+  background: #1abc9c;
+}
+
+.background-four {
+  background: #16a085;
+}
+
+.background-five {
+  background: #2ecc71;
+}
+
+.background-six {
+  background: #27ae60;
+}
+
+.background-seven {
   background: #f1c40f;
 }
 
-.eight {
+.background-eight {
   background: #f39c12;
 }
 
-.nine {
+.background-nine {
   background: #e67e22;
 }
 
-.ten {
+.background-ten {
   background: #d35400;
 }
 
-.eleven {
+.background-eleven {
   background: #e74c3c;
 }
 
-.twelve {
+.background-twelve {
   background: #c0392b;
+}
+
+.description-one {
+  color: #3498db;
+}
+
+.description-two {
+  color: #2980b9;
+}
+
+.description-three {
+  color: #1abc9c;
+}
+
+.description-four {
+  color: #16a085;
+}
+
+.description-five {
+  color: #2ecc71;
+}
+
+.description-six {
+  color: #27ae60;
+}
+
+.description-seven {
+  color: #f1c40f;
+}
+
+.description-eight {
+  color: #f39c12;
+}
+
+.description-nine {
+  color: #e67e22;
+}
+
+.description-ten {
+  color: #d35400;
+}
+
+.description-eleven {
+  color: #e74c3c;
+}
+
+.description-twelve {
+  color: #c0392b;
 }
 
 /*Media*/
@@ -101,7 +200,7 @@ body {
         flex-direction: column;
   }
   .square {
-    min-height: 400px;
+    min-height: 120px;
   }
 }
 /*# sourceMappingURL=style.css.map */
